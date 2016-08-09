@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+</head>
+
+<body>
+<p>
+ BookName:<input type='text' id='book'>
+<button>Add</button>
+</p>
+<p>Your have the <span id='bookCount'>0</span> book</p>
+<ul id='list'></ul>
+
+<script>
+$('button').click(function(){
+  $('#list').append($('<li>' + $('#book').val() + '</li>'));
+  $('#book').val('');
+  $('#bookCount').text($('#list li').length);
+
+});
+
+
+</script>
+</body>
+</html>
