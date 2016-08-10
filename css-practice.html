@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+</head>
+
+<body>
+<h3>CSS Practice</h3>
+<ul id='booklist'>
+  <li>Item1</li>
+  <li>Item2</li>
+  <li>Item3</li>
+  <li>Item4</li>
+</ul>
+<script>
+$('li:even').css('color','red');
+$('li:odd').css('color','blue');
+
+$('li').each(function(index){
+  var size = 1 + index * 0.5;
+  $(this).css('font-size', '' + size + 'em');
+});
+</script>
+</body>
+
+</html>
